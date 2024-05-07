@@ -39,7 +39,7 @@ const Card = ({
                     <p>{user.address.city} {user.address.zipcode}</p>
                 </div>
             </div>
-            <div className="absolute text-xs px-2 py-1 text-white rounded-full bg-cyan-900 top-3 right-3">
+            <div className="absolute text-xs px-2 py-1 text-white rounded-full bg-cyan-900 top-4 right-4">
                 {formatDateTime(user.birthDate)}
             </div>
         </div>

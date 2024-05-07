@@ -24,7 +24,7 @@ const Page = () => {
 
     return (
         <div>
-            <h1 className="text-4xl text-white font-bold">API Users</h1>
+            <h1 className="text-4xl text-white">API Users</h1>
             <div className="grid grid-cols-1 w-full sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-5">
                 {users.map((user) => {
                     return (
