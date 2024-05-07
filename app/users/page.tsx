@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { getUsers } from '../api/users/route';
-import Card from '../components/Card';
+import Card from '../../components/Card';
 
 const Page = () => {
 

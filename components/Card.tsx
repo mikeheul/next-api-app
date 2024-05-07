@@ -32,7 +32,7 @@ const Card = ({
         {"bg-slate-600": user.id % 2 === 0}
         )}>
             <div className="flex flex-col">
-                <p className="text-xl text-white font-semibold">{user.firstname} {user.lastname}</p>
+                <p className="dark:text-red-500 text-xl text-white font-semibold">{user.firstname} {user.lastname}</p>
                 <div className="text-sm text-slate-300">
                     <p>{user.email}</p>
                     <p>{user.address.street}</p>

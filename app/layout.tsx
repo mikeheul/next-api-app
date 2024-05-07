@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./providers/theme-provider";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,11 +17,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="p-4 md:p-6 bg-slate-900 dark">
-          {children}
+        <div className="p-4 md:p-6 bg-slate-900">
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <ThemeSwitcher />
+            {children}
+          </ThemeProvider>
         </div>
       </body>
     </html>
