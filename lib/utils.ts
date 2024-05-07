@@ -11,9 +11,14 @@ export const formatDateTime = (datetime?: string) => {
   }
 
   const date = new Date(datetime);
-  return new Intl.DateTimeFormat('fr-FR', {
+  const formattedDate = new Intl.DateTimeFormat('fr-FR', {
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
   }).format(date);
+
+  const parts = formattedDate.split('/');
+  const formattedWithDash = parts.join('-');
+
+  return formattedWithDash;
 };
